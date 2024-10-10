@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/campo_futbol_opa"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/lexend_bold"
+        android:text="@string/txt_titRecuContra"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="14dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputFilledStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/txtEmail"
+            android:hint="@string/txt_mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecuperaContra"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/txt_titRecuContra"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            app:backgroundTint="@color/botones"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVolver"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/txt_btn_volver"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            app:backgroundTint="@color/botones"/>
+
+    </LinearLayout>
+
+</LinearLayout>

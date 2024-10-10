@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Club Deportivo</string>
+    <string name="txt_TituloLogin">Club Deportivo</string>
+    <string name="txt_Usuario">Usuario</string>
+    <string name="txt_Contraseña">Contraseña</string>
+    <string name="txt_btn_Inicio">Iniciar sesion</string>
+    <string name="txt_titRecuContra">Recuperar contraseña</string>
+    <string name="txt_btn_volver">Volver</string>
+    <string name="txt_mail">Correo electronico</string>
+    <string name="txt_RecuperaContra02">Revise la casilla de su correo electronico
+        para recuperar su contraseña</string>
+
+    <!-- TEXTOS MENU -->
+    <string name="txt_Tit_Menu">Menú Principal</string>
+    <string name="txt_btn_Registrar">Registrar socio</string>
+    <string name="txt_btn_Vencimientos">Vencimientos</string>
+    <string name="txt_btn_Carnet">Entregar carnet</string>
+    <string name="txt_btn_InscripcionAct">Inscripción en Actividad</string>
+    <string name="txt_btn_CobrarCuota">Cobrar cuota</string>
+
+    <!-- TEXTOS REGISTRO_SOCIO LAYOUT-->
+    <string name="txt_Tit_Registro">Registrar Socio</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellido">Apellido</string>
+    <string name="hint_documento">Documento</string>
+    <string name="hint_condicion">Condición</string>
+    <string name="txt_btn_">Registrar</string>
+    <string name="txt_btn_Limpiar">Limpiar</string>
+    <string name="txt_btn_Cancelar">Cancelar</string>
+
+    <!-- DropDown Items -->
+    <string-array name="condicionesSocio">
+        <item>Socio</item>
+        <item>No Socio</item>
+    </string-array>
+
+    <!-- TEXTO ENTREGA CARNET -->
+    <string name="txt_Tit_EntregaCarnet">Entrega de Carnet</string>
+    <string name="txt_lbl">Buscar socio por DNI</string>
+    <string name="txt_btn_Buscar">Buscar</string>
+
+    <!-- TEXTOS INSCRIPCION -->
+    <string name="txt_Tit_Inscripcion">Inscripción</string>
+</resources>
