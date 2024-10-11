@@ -36,9 +36,20 @@
 
     <!-- TEXTO ENTREGA CARNET -->
     <string name="txt_Tit_EntregaCarnet">Entrega de Carnet</string>
-    <string name="txt_lbl">Buscar socio por DNI</string>
+    <string name="txt_lbl_EntregaCarnet">Buscar socio por DNI</string>
     <string name="txt_btn_Buscar">Buscar</string>
 
-    <!-- TEXTOS INSCRIPCION -->
-    <string name="txt_Tit_Inscripcion">Inscripción</string>
+    <!-- TEXTO INSCRIPCION -->
+    <string name="txt_Tit_Inscripcion">Inscripcion</string>
+    <string name="txt_Tit_Inscripcion1">Ingrese numero de documento</string>
+    <string name="txt_lbl_Inscripcion1">DNI</string>
+    <string name="txt_Tit_Inscripcion2">Seleccione actividad</string>
+    <string name="txt_lbl_Inscripcion2">Actividad</string>
+    <string name="txt_btn_RealizarPago">Realizar pago</string>
+
+    <!-- TEXTO VENCIMIENTOS -->
+    <string name="txt_Tit_Vencimientos">Vencimientos</string>
+    <string name="txt_lbl_EntregaCarnet">Buscar socio por DNI</string>
+    <string name="txt_btn_Buscar">Buscar</string>
+
 </resources>
