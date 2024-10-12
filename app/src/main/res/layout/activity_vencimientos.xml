@@ -2,13 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Inscripcion"
+    android:id="@+id/Vencimientos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/campo_futbol_opa"
     android:orientation="vertical"
-    android:padding="25dp"
-    tools:context=".Inscripcion_Socio_Actividad01">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/lblTit_EntregaCarnet"
@@ -17,10 +16,20 @@
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/lexend_bold"
-        android:text="@string/txt_Tit_Inscripcion"
+        android:text="@string/txt_Tit_Vencimientos"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="55sp" />
+        android:textSize="50sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Cuotas que vencen hoy"
+        android:textAppearance="?attr/textAppearanceTitleMedium"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -32,38 +41,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans"
-                android:text="@string/txt_Tit_Inscripcion1"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textSize="20sp" />
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/lblDocumento"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+
+            <ListView
+                android:id="@+id/myListView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="@string/hint_documento">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans"
-                android:text="@string/txt_lbl_Inscripcion2"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textSize="20sp" />
-            <Spinner
-                android:id="@+id/spinner_inscripcion_actividad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"
-                android:layout_marginBottom="16dp"/>
+                android:layout_height="wrap_content" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegistrarSoc"
                 android:layout_width="match_parent"
@@ -76,6 +59,7 @@
                 android:textSize="20sp"
                 app:backgroundTint="@color/botones" />
         </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnEntregaCarnet"
@@ -90,4 +74,5 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:backgroundTint="@color/botones" />
+
 </LinearLayout>
