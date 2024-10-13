@@ -11,7 +11,7 @@
     tools:context=".Inscripcion_Socio_Actividad01">
 
     <TextView
-        android:id="@+id/lblTit_EntregaCarnet"
+        android:id="@+id/lblTit_Inscripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -27,11 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="14dp">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="20dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,6 +41,7 @@
                 android:text="@string/txt_Tit_Inscripcion1"
                 android:textAppearance="?attr/textAppearanceTitleMedium"
                 android:textSize="20sp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/lblDocumento"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -46,11 +49,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:hint="@string/hint_documento">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,29 +63,32 @@
                 android:text="@string/txt_lbl_Inscripcion2"
                 android:textAppearance="?attr/textAppearanceTitleMedium"
                 android:textSize="20sp" />
+
             <Spinner
                 android:id="@+id/spinner_inscripcion_actividad"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"
-                android:layout_marginBottom="16dp"/>
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:spinnerMode="dropdown" />
+
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRegistrarSoc"
+                android:id="@+id/btn_EmitirInscripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/open_sans"
                 android:padding="10dp"
-                android:text="Emitir"
+                android:text="@string/txt_btn_Emitir"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:backgroundTint="@color/botones" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnEntregaCarnet"
+        android:id="@+id/btn_Volver"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:baselineAligned="false"

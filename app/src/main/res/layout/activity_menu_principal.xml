@@ -30,7 +30,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRegistrarSoc"
+            android:id="@+id/btnRegistrarSocio"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -42,7 +42,7 @@
             app:backgroundTint="@color/botones"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnEntregaCarnet"
+            android:id="@+id/btnEntregarCarnet"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

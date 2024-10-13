@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_comprobante_pago">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:translationY="-40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="455dp"
+            android:background="#F8F8F8"
+            android:divider="@color/black"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.402">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_weight="0"
+                android:background="#00FFFFFF"
+                android:divider="@color/black"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+                android:showDividers="none">
+
+                <ImageView
+                    android:id="@+id/img_LogoComprobante"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:duplicateParentState="true"
+                    android:rotation="0"
+                    android:translationX="10dp"
+                    app:srcCompat="@drawable/background"
+                    tools:layout_conversion_absoluteHeight="73dp"
+                    tools:layout_conversion_absoluteWidth="63dp"
+                    tools:srcCompat="@drawable/logoCarnet" />
+
+                <TextView
+                    android:id="@+id/lbl_LogoComprobante"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lexend_bold"
+                    android:gravity="start"
+                    android:text="@string/txt_lbl_ClubDeportivo"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:translationX="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_Comprobante"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:fontFamily="@font/lexend_bold"
+                android:gravity="center"
+                android:text="@string/txt_lbl_Comprobante"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_FechaComprobante"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|top"
+                android:layout_weight="0"
+                android:fontFamily="@font/lexend_bold"
+                android:gravity="center|end"
+                android:text="@string/txt_lbl_FechaComprobante"
+                android:textAlignment="viewEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="290dp"
+                android:layout_height="99dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl_NombreComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|top"
+                    android:fontFamily="@font/lexend_bold"
+                    android:gravity="center|start"
+                    android:text="@string/txt_lbl_NombreComprobante"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/lbl_NroSocioComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|top"
+                    android:fontFamily="@font/lexend_bold"
+                    android:gravity="center|start"
+                    android:text="@string/txt_lbl_NroSocioComprobante"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/lbl_ActividadesComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|top"
+                    android:fontFamily="@font/lexend_bold"
+                    android:gravity="center|start"
+                    android:text="@string/txt_lbl_ActividadesComprobante"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_ImporteComprobante"
+                android:layout_width="290dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:fontFamily="@font/lexend_bold"
+                android:gravity="center|end"
+                android:text="@string/txt_lbl_ImporteComprobante"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Cancelar"
+        android:layout_width="157dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/open_sans"
+        android:padding="10dp"
+        android:text="@string/txt_btn_Cancelar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@color/botones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ImprimirCarnet"
+        android:layout_width="157dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/open_sans"
+        android:padding="10dp"
+        android:text="@string/txt_btn_ImprimirCarnet"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@color/botones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

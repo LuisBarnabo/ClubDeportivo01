@@ -37,6 +37,7 @@
     <!-- TEXTO ENTREGA CARNET -->
     <string name="txt_Tit_EntregaCarnet">Entrega de Carnet</string>
     <string name="txt_lbl_EntregaCarnet">Buscar socio por DNI</string>
+    <string name="txt_lbl_IngreseDNICarnet">Ingrese el DNI del socio</string>
     <string name="txt_btn_Buscar">Buscar</string>
 
     <!-- TEXTO INSCRIPCION -->
@@ -49,7 +50,26 @@
 
     <!-- TEXTO VENCIMIENTOS -->
     <string name="txt_Tit_Vencimientos">Vencimientos</string>
-    <string name="txt_lbl_EntregaCarnet">Buscar socio por DNI</string>
-    <string name="txt_btn_Buscar">Buscar</string>
+    <string name="txt_lbl_Cuotas">Cuotas que vencen hoy</string>
+    <string name="txt_btn_Emitir">Emitir</string>
+
+    <!-- TEXTO CARNET -->
+    <string name="txt_btn_ImprimirCarnet">Imprimir</string>
+    <string name="txt_lbl_ClubDeportivo">Club Deportivo</string>
+    <string name="txt_lbl_NroSocioCarnet">000</string>
+    <string name="txt_lbl_NombreCarnet">Nombre Apellido</string>
+
+    <!-- TEXTO COBRAR CUOTA -->
+    <string name="txt_Tit_CobrarCuota">Cobrar Cuota</string>
+
+
+    <!-- TEXTO COMPROBANTE PAGO -->
+    <string name="txt_lbl_Comprobante">Comprobante de Pago</string>
+    <string name="txt_lbl_FechaComprobante">Fecha: </string>
+    <string name="txt_lbl_NombreComprobante">Nombre: </string>
+    <string name="txt_lbl_NroSocioComprobante">Nro de Socio: </string>
+    <string name="txt_lbl_ActividadesComprobante">Actividades Contratadas: </string>
+    <string name="txt_lbl_ImporteComprobante">Importe Abonado: $</string>
+
 
 </resources>
