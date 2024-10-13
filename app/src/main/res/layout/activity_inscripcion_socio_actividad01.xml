@@ -11,7 +11,7 @@
     tools:context=".Inscripcion_Socio_Actividad01">
 
     <TextView
-        android:id="@+id/lblTit_Vencimientos"
+        android:id="@+id/lblTit_Inscripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -72,7 +72,7 @@
                 android:spinnerMode="dropdown" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_emitir_vencimientos"
+                android:id="@+id/btn_EmitirInscripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
