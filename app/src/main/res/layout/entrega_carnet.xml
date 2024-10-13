@@ -16,7 +16,7 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/lblTit_EntregaCarnet"
+            android:id="@+id/lblTit_Vencimientos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -28,12 +28,13 @@
             android:textSize="55sp" />
 
         <TextView
+            android:id="@+id/lbl_EntregaCarnet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:fontFamily="@font/open_sans_bold"
-            android:text="Buscar socio por DNI"
+            android:text="@string/txt_lbl_EntregaCarnet"
             android:textAppearance="?attr/textAppearanceTitleMedium"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -52,10 +53,11 @@
                 android:padding="20dp">
 
                 <TextView
+                    android:id="@+id/lbl_IngreseDNICarnet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans"
-                    android:text="Ingrese el DNI del socio"
+                    android:text="@string/txt_lbl_IngreseDNICarnet"
                     android:textAppearance="?attr/textAppearanceTitleMedium"
                     android:textSize="20sp" />
 
@@ -74,13 +76,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnRegistrarSoc"
+                    android:id="@+id/btn_emitir_vencimientos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/open_sans"
                     android:padding="10dp"
-                    android:text="Emitir"
+                    android:text="@string/txt_btn_Emitir"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:backgroundTint="@color/botones" />
@@ -89,7 +91,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnEntregaCarnet"
+            android:id="@+id/btn_Volver"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -99,7 +101,7 @@
             android:padding="10dp"
             android:text="@string/txt_btn_volver"
             android:textColor="@color/white"
-            android:textSize="10dp"
+            android:textSize="20sp"
             app:backgroundTint="@color/botones" />
     </LinearLayout>
 </LinearLayout>

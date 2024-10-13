@@ -10,7 +10,7 @@
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/lblTit_EntregaCarnet"
+        android:id="@+id/lblTit_Vencimientos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -20,13 +20,15 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="50sp" />
+
     <TextView
+        android:id="@+id/txt_cuotas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/open_sans_bold"
-        android:text="Cuotas que vencen hoy"
+        android:text="@string/txt_lbl_Cuotas"
         android:textAppearance="?attr/textAppearanceTitleMedium"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -48,23 +50,24 @@
                 android:layout_height="wrap_content" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRegistrarSoc"
+                android:id="@+id/btn_EmitirVencimientos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/open_sans"
                 android:padding="10dp"
-                android:text="Emitir"
+                android:text="@string/txt_btn_Emitir"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:backgroundTint="@color/botones" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnEntregaCarnet"
+        android:id="@+id/btn_Volver"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:baselineAligned="false"

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.App_Modelo"
         tools:targetApi="31">
         <activity
+            android:name=".activity_imprimir_carnet"
+            android:exported="false" />
+        <activity
             android:name=".Entrega_Carnet_01"
             android:exported="false" />
         <activity
