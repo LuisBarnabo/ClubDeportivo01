@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.324"
-        app:srcCompat="@drawable/logoCarnet"
+        app:srcCompat="@drawable/logo_carnet"
         tools:srcCompat="@drawable/background" />
 
     <ImageView
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="@+id/img_FondoCarnet"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background"
-        tools:srcCompat="@drawable/logoCarnet" />
+        tools:srcCompat="@drawable/logo_carnet" />
 
     <TextView
         android:id="@+id/lbl_ClubDeportivo"
