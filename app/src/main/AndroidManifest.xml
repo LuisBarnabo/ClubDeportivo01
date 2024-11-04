@@ -16,7 +16,7 @@
             android:name=".activity_comprobante_pago"
             android:exported="false" />
         <activity
-            android:name=".activity_cobrar_cuota"
+            android:name=".CobrarCuota"
             android:exported="false" />
         <activity
             android:name=".activity_imprimir_carnet"
