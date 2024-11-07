@@ -22,7 +22,7 @@ class Login : AppCompatActivity() {
 
         val btnRecuperarContra = findViewById<TextView>(btn_OlvidasteContra)
         btnRecuperarContra.setOnClickListener {
-            val intentarRecuperarContra = Intent(this, RecuperarContra_01::class.java)
+            val intentarRecuperarContra = Intent(this, RecuperarContra01::class.java)
             startActivity(intentarRecuperarContra)
         }
 

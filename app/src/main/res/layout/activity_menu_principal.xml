@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -39,7 +38,7 @@
             android:fontFamily="@font/open_sans"
             android:textSize="20sp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEntregarCarnet"
@@ -52,7 +51,7 @@
             android:textSize="20sp"
             android:layout_marginTop="30dp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnInscripcionAct"
@@ -65,7 +64,8 @@
             android:textSize="20sp"
             android:layout_marginTop="30dp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVencimientos"
             android:layout_width="300dp"
@@ -77,7 +77,7 @@
             android:textSize="20sp"
             android:layout_marginTop="30dp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCobrarCuota"
@@ -90,7 +90,7 @@
             android:textSize="20sp"
             android:layout_marginTop="30dp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
 
     </LinearLayout>
 

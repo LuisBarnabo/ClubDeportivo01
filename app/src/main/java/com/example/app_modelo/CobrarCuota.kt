@@ -26,5 +26,11 @@ class CobrarCuota : AppCompatActivity() {
             val intentarComprobante = Intent(this, activity_comprobante_pago::class.java)
             startActivity(intentarComprobante)
         }
+
+        val btnVolver = findViewById<Button>(R.id.btnVolver_Cobrar)
+        btnVolver.setOnClickListener{
+            val intentVolver = Intent(this, MenuPrincipal::class.java)
+            startActivity(intentVolver)
+        }
     }
 }

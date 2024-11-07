@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,6 +27,7 @@
         android:layout_marginTop="140dp"
         android:layout_marginBottom="14dp"
         android:orientation="vertical">
+
         <com.google.android.material.textfield.TextInputLayout
             style="?attr/textInputFilledStyle"
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_bold"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -54,7 +54,7 @@
             android:textSize="20sp"
             android:layout_marginTop="50dp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVolver"
@@ -67,7 +67,7 @@
             android:textSize="20sp"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            app:backgroundTint="@color/botones"/>
+            app:backgroundTint="@color/botones" />
 
     </LinearLayout>
 

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class Registrar_Socio_01 : AppCompatActivity() {
+class RegistrarSocio01 : AppCompatActivity() {
 
     /*private lateinit var binding: ActivityRegistrarSocio01Binding*/
     override fun onCreate(savedInstanceState: Bundle?) {

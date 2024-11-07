@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,12 @@
         android:theme="@style/Theme.App_Modelo"
         tools:targetApi="31">
         <activity
+            android:name=".Vencimientos01"
+            android:exported="false" />
+        <activity
+            android:name=".EntregaCarnet01"
+            android:exported="false" />
+        <activity
             android:name=".activity_comprobante_pago"
             android:exported="false" />
         <activity
@@ -22,22 +30,19 @@
             android:name=".activity_imprimir_carnet"
             android:exported="false" />
         <activity
-            android:name=".Entrega_Carnet_01"
+            android:name=".InscripcionSocioActividad01"
             android:exported="false" />
         <activity
-            android:name=".Inscripcion_Socio_Actividad01"
-            android:exported="false" />
-        <activity
-            android:name=".Registrar_Socio_01"
+            android:name=".RegistrarSocio01"
             android:exported="false" />
         <activity
             android:name=".MenuPrincipal"
             android:exported="false" />
         <activity
-            android:name=".RecuperarContra_02"
+            android:name=".RecuperarContra02"
             android:exported="false" />
         <activity
-            android:name=".RecuperarContra_01"
+            android:name=".RecuperarContra01"
             android:exported="false" />
         <activity
             android:name=".Login"

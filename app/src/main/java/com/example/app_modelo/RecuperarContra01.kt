@@ -7,14 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.app_modelo.R.id.btnRecuperaContra
 import com.example.app_modelo.R.id.btnVolver
 
-class RecuperarContra_01 : AppCompatActivity() {
+class RecuperarContra01 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recuperar_contra01)
 
         val btnRecuperarContra = findViewById<Button>(btnRecuperaContra)
         btnRecuperarContra.setOnClickListener{
-            val intentarRecuperarContra = Intent(this,RecuperarContra_02::class.java)
+            val intentarRecuperarContra = Intent(this,RecuperarContra02::class.java)
             startActivity(intentarRecuperarContra)
         }
 

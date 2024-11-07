@@ -7,7 +7,7 @@
     android:background="@drawable/campo_futbol_opa">
 
     <LinearLayout
-        android:id="@+id/login"
+        android:id="@+id/RegistroSocio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -28,7 +28,7 @@
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card"
+            android:id="@+id/cardRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
