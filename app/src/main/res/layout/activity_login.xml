@@ -33,13 +33,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="35dp"
-            android:id="@+id/txtUsuario"
             android:hint="@string/txt_Usuario">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_bold"
+                android:id="@+id/txtUsuario"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,7 +48,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:id="@+id/txtContrasena"
             android:hint="@string/txt_Contraseña"
             app:passwordToggleEnabled="true">
 
@@ -56,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_bold"
+                android:id="@+id/txtContrasena"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 

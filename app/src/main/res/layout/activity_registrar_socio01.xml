@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -118,7 +117,7 @@
                 android:fontFamily="@font/open_sans"
                 android:textSize="20sp"
                 android:padding="10dp"
-                app:backgroundTint="@color/botones"/>
+                app:backgroundTint="@color/botones" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLimpiarRegistro"
@@ -131,7 +130,7 @@
                 android:textSize="20sp"
                 android:layout_marginTop="30dp"
                 android:padding="10dp"
-                app:backgroundTint="@color/botones"/>
+                app:backgroundTint="@color/botones" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCancelarRegistro"
@@ -144,7 +143,7 @@
                 android:textSize="20sp"
                 android:layout_marginTop="30dp"
                 android:padding="10dp"
-                app:backgroundTint="@color/md_theme_errorContainer_highContrast"/>
+                app:backgroundTint="@color/md_theme_errorContainer_highContrast" />
 
         </LinearLayout>
 

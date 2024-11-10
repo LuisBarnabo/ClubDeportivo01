@@ -8,7 +8,7 @@
     android:background="@drawable/campo_futbol_opa"
     android:orientation="vertical"
     android:padding="25dp"
-    tools:context=".InscripcionSocioActividad01">
+    tools:context=".ui.InscripcionSocioActividad01">
 
     <TextView
         android:id="@+id/lblTit_Inscripcion"

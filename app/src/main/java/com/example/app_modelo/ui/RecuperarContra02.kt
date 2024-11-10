@@ -1,11 +1,13 @@
-package com.example.app_modelo
+package com.example.app_modelo.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app_modelo.R
 
-class activity_imprimir_carnet : AppCompatActivity() {
+class RecuperarContra02 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_imprimir_carnet)
+        setContentView(R.layout.activity_recuperar_contra02)
+
     }
 }

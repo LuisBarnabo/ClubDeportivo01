@@ -1,9 +1,10 @@
-package com.example.app_modelo
+package com.example.app_modelo.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app_modelo.R
 import com.example.app_modelo.R.id.btnCobrarCuota
 import com.example.app_modelo.R.id.btnEntregarCarnet
 import com.example.app_modelo.R.id.btnInscripcionAct
@@ -16,7 +17,7 @@ class MenuPrincipal : AppCompatActivity() {
         setContentView(R.layout.activity_menu_principal)
 
         val btnRegistarSocio = findViewById<Button>(btnRegistrarSocio)
-        btnRegistarSocio.setOnClickListener{
+        btnRegistarSocio.setOnClickListener {
             val intentarRegistro = Intent(this, RegistrarSocio01::class.java)
             startActivity(intentarRegistro)
         }
@@ -46,7 +47,7 @@ class MenuPrincipal : AppCompatActivity() {
         }
 
         val btnInscripcionSocioActividad01 = findViewById<Button>(btnInscripcionAct)
-        btnInscripcionSocioActividad01.setOnClickListener{
+        btnInscripcionSocioActividad01.setOnClickListener {
             val intentarInscripcionAct = Intent(this, InscripcionSocioActividad01::class.java)
             startActivity(intentarInscripcionAct)
         }

@@ -1,57 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CobrarCuota">
-
-  <LinearLayout
-      android:id="@+id/entregaCarnet"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="@drawable/campo_futbol_opa"
-      android:orientation="vertical"
-      android:padding="25dp">
+    tools:context=".ui.CobrarCuota">
 
     <LinearLayout
+        android:id="@+id/entregaCarnet"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/campo_futbol_opa"
         android:orientation="vertical"
-        android:padding="20dp">
-
-      <TextView
-          android:id="@+id/lblTit_CobrarCuota"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginTop="120dp"
-          android:fontFamily="@font/lexend_bold"
-          android:text="@string/txt_Tit_CobrarCuota"
-          android:textAlignment="center"
-          android:textColor="@color/white"
-          android:textSize="55sp" />
-
-      <TextView
-          android:id="@+id/lbl_CobrarCuota"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginTop="50dp"
-          android:fontFamily="@font/open_sans_bold"
-          android:text="@string/txt_lbl_EntregaCarnet"
-          android:textAppearance="?attr/textAppearanceTitleMedium"
-          android:textColor="@color/white"
-          android:textSize="20sp" />
-
-      <com.google.android.material.card.MaterialCardView
-          android:id="@+id/card"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="40dp"
-          android:layout_marginBottom="14dp">
+        android:padding="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,61 +21,98 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-          <TextView
-              android:id="@+id/lbl_IngreseDNICuota"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:fontFamily="@font/open_sans"
-              android:text="@string/txt_lbl_IngreseDNICarnet"
-              android:textAppearance="?attr/textAppearanceTitleMedium"
-              android:textSize="20sp" />
-
-          <com.google.android.material.textfield.TextInputLayout
-              android:id="@+id/lblDocumento"
-              style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginBottom="16dp"
-              android:hint="@string/hint_documento">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
+                android:id="@+id/lblTit_CobrarCuota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number" />
-          </com.google.android.material.textfield.TextInputLayout>
+                android:layout_gravity="center"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/lexend_bold"
+                android:text="@string/txt_Tit_CobrarCuota"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="55sp" />
 
-          <com.google.android.material.button.MaterialButton
-              android:id="@+id/btn_EmitirCuota"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_gravity="center"
-              android:fontFamily="@font/open_sans"
-              android:padding="10dp"
-              android:text="@string/txt_btn_Emitir"
-              android:textColor="@color/white"
-              android:textSize="20sp"
-              app:backgroundTint="@color/botones" />
+            <TextView
+                android:id="@+id/lbl_CobrarCuota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/txt_lbl_EntregaCarnet"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/lbl_IngreseDNICuota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/txt_lbl_IngreseDNICarnet"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lblDocumento"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="@string/hint_documento">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_EmitirCuota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="10dp"
+                        android:text="@string/txt_btn_Emitir"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:backgroundTint="@color/botones" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVolver_Cobrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:baselineAligned="false"
+                android:fontFamily="@font/open_sans"
+                android:padding="10dp"
+                android:text="@string/txt_btn_volver"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:backgroundTint="@color/botones" />
 
         </LinearLayout>
 
-      </com.google.android.material.card.MaterialCardView>
-
-      <com.google.android.material.button.MaterialButton
-          android:id="@+id/btnVolver_Cobrar"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginTop="50dp"
-          android:baselineAligned="false"
-          android:fontFamily="@font/open_sans"
-          android:padding="10dp"
-          android:text="@string/txt_btn_volver"
-          android:textColor="@color/white"
-          android:textSize="20sp"
-          app:backgroundTint="@color/botones" />
-
     </LinearLayout>
-
-  </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

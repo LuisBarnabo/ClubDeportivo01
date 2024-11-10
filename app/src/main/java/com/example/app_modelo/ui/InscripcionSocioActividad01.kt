@@ -1,10 +1,10 @@
-package com.example.app_modelo
+package com.example.app_modelo.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.app_modelo.R.id.btnVolver
+import com.example.app_modelo.R
 import com.example.app_modelo.R.id.btnVolverInscripcionAct
 
 class InscripcionSocioActividad01 : AppCompatActivity() {

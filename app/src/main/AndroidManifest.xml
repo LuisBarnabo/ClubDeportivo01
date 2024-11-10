@@ -13,39 +13,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_Modelo"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".Vencimientos01"
+            android:name=".ui.Vencimientos01"
             android:exported="false" />
         <activity
-            android:name=".EntregaCarnet01"
+            android:name=".ui.EntregaCarnet01"
             android:exported="false" />
         <activity
-            android:name=".activity_comprobante_pago"
+            android:name=".ui.activity_comprobante_pago"
             android:exported="false" />
         <activity
-            android:name=".CobrarCuota"
+            android:name=".ui.CobrarCuota"
             android:exported="false" />
         <activity
-            android:name=".activity_imprimir_carnet"
+            android:name=".ui.activity_imprimir_carnet"
             android:exported="false" />
         <activity
-            android:name=".InscripcionSocioActividad01"
+            android:name=".ui.InscripcionSocioActividad01"
             android:exported="false" />
         <activity
-            android:name=".RegistrarSocio01"
+            android:name=".ui.RegistrarSocio01"
             android:exported="false" />
         <activity
-            android:name=".MenuPrincipal"
+            android:name=".ui.MenuPrincipal"
             android:exported="false" />
         <activity
-            android:name=".RecuperarContra02"
+            android:name=".ui.RecuperarContra02"
             android:exported="false" />
         <activity
-            android:name=".RecuperarContra01"
+            android:name=".ui.RecuperarContra01"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".ui.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

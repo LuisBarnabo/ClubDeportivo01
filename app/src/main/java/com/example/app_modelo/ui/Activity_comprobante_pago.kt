@@ -1,10 +1,11 @@
-package com.example.app_modelo
+package com.example.app_modelo.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.app_modelo.R
 
 class activity_comprobante_pago : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
