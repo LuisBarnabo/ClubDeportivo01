@@ -40,7 +40,7 @@
                 android:padding="14dp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lblNombre"
+
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -48,13 +48,13 @@
                     android:hint="@string/hint_nombre">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lblNombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lblApellido"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -62,13 +62,13 @@
                     android:hint="@string/hint_apellido">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lblApellido"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lblDocumento"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -76,6 +76,7 @@
                     android:hint="@string/hint_documento">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lblDocumento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number" />

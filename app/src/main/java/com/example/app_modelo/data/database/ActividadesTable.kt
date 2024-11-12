@@ -1,6 +1,6 @@
 package com.example.app_modelo.data.database
 
-object ActividadTable {
+object ActividadesTable {
     const val TABLE_NAME = "Actividades"
     val CREATE_TABLE = """
         CREATE TABLE $TABLE_NAME (

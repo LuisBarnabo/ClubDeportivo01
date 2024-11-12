@@ -23,7 +23,7 @@ class AppDatabaseHelper(context: Context) :
         db.execSQL(SocioTable.CREATE_TABLE)
         db.execSQL(NoSocioTable.CREATE_TABLE)
         db.execSQL(PagosTable.CREATE_TABLE)
-        db.execSQL(ActividadTable.CREATE_TABLE)
+        db.execSQL(ActividadesTable.CREATE_TABLE)
 
         // Precarga de datos
         insertarDatosIniciales(db)
@@ -36,7 +36,7 @@ class AppDatabaseHelper(context: Context) :
         db.execSQL(SocioTable.DROP_TABLE)
         db.execSQL(NoSocioTable.DROP_TABLE)
         db.execSQL(PagosTable.DROP_TABLE)
-        db.execSQL(ActividadTable.DROP_TABLE)
+        db.execSQL(ActividadesTable.DROP_TABLE)
         onCreate(db)
     }
 
@@ -181,61 +181,62 @@ class AppDatabaseHelper(context: Context) :
         valuesActividad1.put("nombreActividad", "Spinning")
         valuesActividad1.put("precioDiario", 500)
         valuesActividad1.put("cupoDisponible", 15)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad1)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad1)
 
         val valuesActividad2 = ContentValues()
         valuesActividad2.put("nombreActividad", "Funcional")
         valuesActividad2.put("precioDiario", 700)
         valuesActividad2.put("cupoDisponible", 10)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad2)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad2)
 
         val valuesActividad3 = ContentValues()
         valuesActividad3.put("nombreActividad", "Natacion")
         valuesActividad3.put("precioDiario", 800)
         valuesActividad3.put("cupoDisponible", 20)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad3)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad3)
 
         val valuesActividad4 = ContentValues()
         valuesActividad4.put("nombreActividad", "Yoga")
         valuesActividad4.put("precioDiario", 400)
         valuesActividad4.put("cupoDisponible", 12)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad4)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad4)
 
         val valuesActividad5 = ContentValues()
         valuesActividad5.put("nombreActividad", "Futbol")
         valuesActividad5.put("precioDiario", 600)
         valuesActividad5.put("cupoDisponible", 20)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad5)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad5)
 
         val valuesActividad6 = ContentValues()
         valuesActividad6.put("nombreActividad", "Pilates")
         valuesActividad6.put("precioDiario", 600)
         valuesActividad6.put("cupoDisponible", 0)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad6)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad6)
 
         val valuesActividad7 = ContentValues()
         valuesActividad7.put("nombreActividad", "Zumba")
         valuesActividad7.put("precioDiario", 350)
         valuesActividad7.put("cupoDisponible", 18)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad7)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad7)
 
         val valuesActividad8 = ContentValues()
         valuesActividad8.put("nombreActividad", "Escalada")
         valuesActividad8.put("precioDiario", 800)
         valuesActividad8.put("cupoDisponible", 6)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad8)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad8)
 
         val valuesActividad9 = ContentValues()
         valuesActividad9.put("nombreActividad", "Voley")
         valuesActividad9.put("precioDiario", 600)
         valuesActividad9.put("cupoDisponible", 12)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad9)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad9)
 
         val valuesActividad10 = ContentValues()
         valuesActividad10.put("nombreActividad", "Judo")
         valuesActividad10.put("precioDiario", 500)
         valuesActividad10.put("cupoDisponible", 10)
-        db.insert(ActividadTable.TABLE_NAME, null, valuesActividad10)
+        db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad10)
     }
+
 
 }

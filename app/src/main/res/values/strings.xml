@@ -12,7 +12,7 @@
 
     <!-- TEXTOS MENU -->
     <string name="txt_Tit_Menu">Menú Principal</string>
-    <string name="txt_btn_Registrar">Registrar socio</string>
+    <string name="txt_btn_RegistrarSocio">Registrar socio</string>
     <string name="txt_btn_Vencimientos">Vencimientos</string>
     <string name="txt_btn_Carnet">Entregar carnet</string>
     <string name="txt_btn_InscripcionAct">Inscripción en Actividad</string>
@@ -24,7 +24,7 @@
     <string name="hint_apellido">Apellido</string>
     <string name="hint_documento">Documento</string>
     <string name="hint_condicion">Condición</string>
-    <string name="txt_btn_">Registrar</string>
+    <string name="txt_btn_Registrar">Registrar</string>
     <string name="txt_btn_Limpiar">Limpiar</string>
     <string name="txt_btn_Cancelar">Cancelar</string>
 
@@ -46,6 +46,7 @@
     <string name="txt_lbl_Inscripcion1">DNI</string>
     <string name="txt_Tit_Inscripcion2">Seleccione la actividad</string>
     <string name="txt_lbl_Inscripcion2">Actividad</string>
+    <string name="btnRegistraSocioAct">Registrar</string>
     <string name="txt_btn_RealizarPago">Realizar pago</string>
 
     <!-- TEXTO VENCIMIENTOS -->
