@@ -11,7 +11,7 @@ import com.google.android.material.textfield.TextInputEditText
 
 class EntregaCarnet01 : AppCompatActivity() {
 
-    lateinit var etDocumento: TextInputEditText
+    private lateinit var etDocumento: TextInputEditText
     private lateinit var socioRepository: SocioRepository
 
 
@@ -23,7 +23,7 @@ class EntregaCarnet01 : AppCompatActivity() {
 
         etDocumento = findViewById<TextInputEditText>(R.id.txtDocEntregaCarnet)
 
-        val documento = etDocumento.text.toString().trim()
+        // val documento = etDocumento.text.toString().trim()
 
         val btnVolver = findViewById<Button>(R.id.btnVolver_Entrega)
         btnVolver.setOnClickListener {
