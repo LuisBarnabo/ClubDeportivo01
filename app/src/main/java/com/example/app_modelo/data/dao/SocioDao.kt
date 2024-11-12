@@ -49,5 +49,4 @@ class SocioDao (private val database: SQLiteDatabase) {
             arrayOf(idSocio.toString())
         )
     }
-
 }

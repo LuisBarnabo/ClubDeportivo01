@@ -33,4 +33,15 @@ class SocioRepository(context: Context) {
     fun sumarActividad(idSocio: Int) {
         socioDao.incrementarActividadSocio(idSocio)
     }
+
+    fun socioExiste(documento: Int): Boolean {
+        val socios = socioDao.obtenerSocios()
+        return socios.any { it.documentoSocio == documento }
+    }
+
+    fun obtenerSocioPorDocumento(documento: Int): Socio? {
+        val socios = socioDao.obtenerSocios()
+        return socios.find { it.documentoSocio == documento }
+    }
+
 }
