@@ -63,6 +63,8 @@ class RegistrarSocio01 : AppCompatActivity() {
                 // Verificar el resultado de la operación
                 if (resultado > 0) {
                     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                    limpiarCampos()
+                    regresarMenuPrincipal()
                 } else {
                     Toast.makeText(this, "Error al registrar", Toast.LENGTH_SHORT).show()
                 }
@@ -72,10 +74,28 @@ class RegistrarSocio01 : AppCompatActivity() {
             }
         }
 
+        val btnLimpiar = findViewById<Button>(R.id.btnLimpiarRegistro)
+        btnLimpiar.setOnClickListener{
+            limpiarCampos()
+        }
+
         val btnCancelar = findViewById<Button>(R.id.btnCancelarRegistro)
         btnCancelar.setOnClickListener {
-            val intentarCancelar = Intent(this, MenuPrincipal::class.java)
-            startActivity(intentarCancelar)
+            regresarMenuPrincipal()
         }
+    }
+
+    private fun limpiarCampos(){
+        tietNombreSocio.setText("")
+        tietApellidoSocio.setText("")
+        tietDocumentoSocio.setText("")
+        actvCondicion.setText("", false)
+        actvCondicion.clearListSelection()
+    }
+
+    private fun regresarMenuPrincipal(){
+        val intentarCancelar = Intent(this, MenuPrincipal::class.java)
+        startActivity(intentarCancelar)
+        finish()
     }
 }

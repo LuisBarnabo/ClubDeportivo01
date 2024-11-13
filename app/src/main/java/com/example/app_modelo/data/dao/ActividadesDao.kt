@@ -3,6 +3,7 @@ package com.example.app_modelo.data.dao
 import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import android.util.Log
 import com.example.app_modelo.data.database.ActividadesTable
 import com.example.app_modelo.data.model.Actividades
 
@@ -34,15 +35,22 @@ class ActividadesDao(private val database: SQLiteDatabase) {
     }
 
     //metodo para restar 1 al cupo disponible de la actividad elegida
-    fun restarCupoActividad(idActividad: Int): Int {
-        val values = ContentValues().apply {
-            put("cuposDisponibles", "cuposDisponibles - 1")
+    fun restarCupoActividad(idActividad: Int): Boolean {
+        return try {
+            // Ejecuta la operación para restar el cupo
+            val query = """
+            UPDATE ${ActividadesTable.TABLE_NAME} 
+            SET cuposDisponibles = cuposDisponibles - 1 
+            WHERE id = ? AND cuposDisponibles > 0
+        """
+            database.execSQL(query, arrayOf(idActividad.toString()))
+
+            // Si no hay errores, devolvemos true indicando éxito
+            true
+        } catch (e: Exception) {
+            // Manejo del error: muestra un mensaje de log y devuelve false
+            Log.e("DatabaseError", "Error al restar cupo: ${e.message}")
+            false
         }
-        return database.update(
-            ActividadesTable.TABLE_NAME,
-            values,
-            "idActividad = ? AND cuposDisponibles > 0",
-            arrayOf(idActividad.toString())
-        )
     }
 }
