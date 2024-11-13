@@ -17,8 +17,11 @@ class ActividadesRepository (context: Context) {
 
     fun obtenerTodasLasActividades(): List<Actividades> = actividadesDao.obtenerTodasLasActividades()
 
-    fun restarCupo(idActividad: Int) {
-        actividadesDao.restarCupoActividad(idActividad)
+    fun restarCupo(idActividad: Int): Boolean {
+        if(actividadesDao.restarCupoActividad(idActividad)){
+            return true
+        }
+        return false
     }
 
 }

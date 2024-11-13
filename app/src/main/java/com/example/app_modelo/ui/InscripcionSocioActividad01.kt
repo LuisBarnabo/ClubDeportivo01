@@ -28,16 +28,16 @@ class InscripcionSocioActividad01 : AppCompatActivity() {
 
         socioRepository = SocioRepository(this)
         actividadesRepository = ActividadesRepository(this)
+        lblDocumento = findViewById(R.id.lblDocumento)
 
         configuracionAutoCompleteTextView()
-
 
         val btnBuscarSocio = findViewById<Button>(btnBuscarSocioInscripcion)
         btnInscripcionSocioAct = findViewById(R.id.btnInscripcionSocioAct)
 
         //este metodo busca el socio en la base de datos con el dni ingresado
         btnBuscarSocio.setOnClickListener{
-            val documento = lblDocumento.text.toString().trim()
+            val documento = lblDocumento.text.toString()
             if (documento.isNotEmpty()) {
                 val dni = documento.toInt()
                 val socioEncontrado = socioRepository.obtenerSocioPorDocumento(dni)
@@ -54,8 +54,49 @@ class InscripcionSocioActividad01 : AppCompatActivity() {
         }
 
         btnInscripcionSocioAct.setOnClickListener{
+            val documento = lblDocumento.text.toString().trim()
+            val actividadSeleccionada = actvActividades.text.toString().trim()
 
+            if (documento.isNotEmpty() && actividadSeleccionada.isNotEmpty()) {
+                val dni = documento.toInt()
+
+                // Buscar socio por DNI
+                val socioEncontrado = socioRepository.obtenerSocioPorDocumento(dni)
+
+                if (socioEncontrado != null) {
+                    // Buscar actividad por nombre
+                    val actividad = actividadesRepository.obtenerTodasLasActividades()
+                        .find { it.nombreActividad == actividadSeleccionada }
+
+                    if (actividad != null) {
+                        // Verificar si la actividad tiene cupos disponibles
+                        if (actividad.cupoDisponible > 0) {
+                            // Incrementar cantidadActividades del socio
+                            val socioActualizado = socioRepository.sumarActividad(socioEncontrado.idSocio)
+
+                            // Restar uno al cupo disponible de la actividad
+                            val actividadActualizada = actividadesRepository.restarCupo(actividad.idActividad)
+
+                            if (socioActualizado && actividadActualizada) {
+                                Toast.makeText(this, "Socio inscrito a la actividad correctamente", Toast.LENGTH_SHORT).show()
+                                limpiarCampos()
+                            } else {
+                                Toast.makeText(this, "Hubo un error al inscribir al socio", Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                            Toast.makeText(this, "No hay cupos disponibles para esta actividad", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        Toast.makeText(this, "Actividad no encontrada", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(this, "Socio no encontrado", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Por favor ingresa todos los campos", Toast.LENGTH_SHORT).show()
+            }
         }
+
         val btnVolver = findViewById<Button>(btnVolverInscripcionAct)
         btnVolver.setOnClickListener {
             val intentarInscripcion = Intent(this, MenuPrincipal::class.java)
@@ -81,6 +122,19 @@ class InscripcionSocioActividad01 : AppCompatActivity() {
             nombresActividades
         )
         actvActividades.setAdapter(adapter)
+    }
+
+    private fun limpiarCampos(){
+
+        lblDocumento.setText("")
+        actvActividades.setText("", false)
+        actvActividades.clearListSelection()
+    }
+
+    private fun regresarMenuPrincipal(){
+        val intentarCancelar = Intent(this, MenuPrincipal::class.java)
+        startActivity(intentarCancelar)
+        finish()
     }
 
 }

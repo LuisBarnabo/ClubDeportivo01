@@ -40,8 +40,8 @@ class ActividadesDao(private val database: SQLiteDatabase) {
             // Ejecuta la operación para restar el cupo
             val query = """
             UPDATE ${ActividadesTable.TABLE_NAME} 
-            SET cuposDisponibles = cuposDisponibles - 1 
-            WHERE id = ? AND cuposDisponibles > 0
+            SET cupoDisponible = cupoDisponible - 1 
+            WHERE idActividad = ? AND cupoDisponible > 0
         """
             database.execSQL(query, arrayOf(idActividad.toString()))
 

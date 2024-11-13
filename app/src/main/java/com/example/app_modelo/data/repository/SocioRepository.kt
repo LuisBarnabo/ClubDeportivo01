@@ -30,8 +30,11 @@ class SocioRepository(context: Context) {
 
     fun obtenerTodosLosSocios(): List<Socio> = socioDao.obtenerSocios()
 
-    fun sumarActividad(idSocio: Int) {
-        socioDao.incrementarActividadSocio(idSocio)
+    fun sumarActividad(idSocio: Int): Boolean {
+        if(socioDao.incrementarActividadSocio(idSocio)){
+            return  true
+        }
+        return false
     }
 
     fun socioExiste(documento: Int): Boolean {
