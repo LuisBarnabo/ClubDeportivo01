@@ -21,4 +21,9 @@ class ActividadesRepository (context: Context) {
         actividadesDao.restarCupoActividad(idActividad)
     }
 
+    fun obtenerActividad(actividad: String): Actividades? {
+        val actividades = actividadesDao.obtenerTodasLasActividades()
+        return actividades.find { it.nombreActividad == actividad }
+    }
+
 }

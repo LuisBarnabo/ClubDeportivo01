@@ -27,4 +27,13 @@ class NoSocioRepository(context: Context) {
         return noSocioDao.insertarNuevoNoSocio(nuevoNoSocio)
     }
 
+    fun noSocioExiste(documento: Int): Boolean {
+        val noSocios = noSocioDao.obtenerNoSocios()
+        return noSocios.any { it.documentoNS == documento }
+    }
+
+    fun obtenerNoSocioPorDocumento(documento: Int): NoSocio? {
+        val noSocios = noSocioDao.obtenerNoSocios()
+        return noSocios.find { it.documentoNS == documento }
+    }
 }

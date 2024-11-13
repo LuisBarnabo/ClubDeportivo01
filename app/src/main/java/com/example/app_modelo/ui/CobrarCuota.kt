@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.app_modelo.R
 import com.example.app_modelo.R.id.btn_EmitirCuota
+import com.example.app_modelo.data.repository.NoSocioRepository
 import com.example.app_modelo.data.repository.SocioRepository
 import com.google.android.material.textfield.TextInputEditText
 
@@ -17,6 +18,7 @@ class CobrarCuota : AppCompatActivity() {
 
     private lateinit var etDocumento: TextInputEditText
     private lateinit var socioRepository: SocioRepository
+    private lateinit var noSocioRepository: NoSocioRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,13 +31,14 @@ class CobrarCuota : AppCompatActivity() {
         }
 
         socioRepository = SocioRepository(this)
+        noSocioRepository = NoSocioRepository(this)
         etDocumento = findViewById<TextInputEditText>(R.id.txtDocCobrarCuota)
 
         val btnEmitirComprobante = findViewById<Button>(btn_EmitirCuota)
         btnEmitirComprobante.setOnClickListener() {
             val documento = etDocumento.text.toString().trim()
             if (documento.isNotEmpty()) {
-                if (socioRepository.socioExiste(documento.toInt())) {
+                if (socioRepository.socioExiste(documento.toInt()) || noSocioRepository.noSocioExiste(documento.toInt())) {
                     val intentComprobante = Intent(this, activity_comprobante_pago::class.java)
                     intentComprobante.putExtra("DOCUMENTO", documento)
                     startActivity(intentComprobante)
