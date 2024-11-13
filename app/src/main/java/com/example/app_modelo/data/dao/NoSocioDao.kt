@@ -12,7 +12,7 @@ class NoSocioDao(private val database: SQLiteDatabase) {
         val valuesNoSocio = ContentValues().apply {
             put("nombreNS", noSocio.nombreNS)
             put("apellidoNS", noSocio.apellidoNS)
-            put("documentNS", noSocio.documentoNS)
+            put("documentoNS", noSocio.documentoNS)
         }
         return database.insert(NoSocioTable.TABLE_NAME, null, valuesNoSocio)
     }
