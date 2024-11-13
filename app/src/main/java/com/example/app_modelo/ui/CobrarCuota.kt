@@ -51,6 +51,7 @@ class CobrarCuota : AppCompatActivity() {
         btnVolver.setOnClickListener {
             val intentVolver = Intent(this, MenuPrincipal::class.java)
             startActivity(intentVolver)
+            finish()
         }
     }
 }

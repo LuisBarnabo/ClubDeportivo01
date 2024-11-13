@@ -39,6 +39,7 @@ class activity_imprimir_carnet : AppCompatActivity() {
         btnCancelar.setOnClickListener {
             val intentCancelar = Intent(this, MenuPrincipal::class.java)
             startActivity(intentCancelar)
+            finish()
         }
     }
 }

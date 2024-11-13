@@ -9,7 +9,7 @@ class AppDatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private val DATABASE_NAME = "CLUBDEPORTIVO.db"
-        private val DATABASE_VERSION = 3
+        private val DATABASE_VERSION = 4
     }
 
     override fun onOpen(db: SQLiteDatabase) {
@@ -24,6 +24,7 @@ class AppDatabaseHelper(context: Context) :
         db.execSQL(NoSocioTable.CREATE_TABLE)
         db.execSQL(PagosTable.CREATE_TABLE)
         db.execSQL(ActividadesTable.CREATE_TABLE)
+        db.execSQL(PreciosTable.CREATE_TABLE)
 
         // Precarga de datos
         insertarDatosIniciales(db)
@@ -37,6 +38,7 @@ class AppDatabaseHelper(context: Context) :
         db.execSQL(NoSocioTable.DROP_TABLE)
         db.execSQL(PagosTable.DROP_TABLE)
         db.execSQL(ActividadesTable.DROP_TABLE)
+        db.execSQL(PreciosTable.DROP_TABLE)
         onCreate(db)
     }
 
@@ -236,6 +238,27 @@ class AppDatabaseHelper(context: Context) :
         valuesActividad10.put("precioDiario", 500)
         valuesActividad10.put("cupoDisponible", 10)
         db.insert(ActividadesTable.TABLE_NAME, null, valuesActividad10)
+
+        // Insertar datos iniciales para la tabla Precios
+        val valuesPrecios1 = ContentValues()
+        valuesPrecios1.put("cantidadActividades", 0)
+        valuesPrecios1.put("precio", 1000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios1)
+
+        val valuesPrecios2 = ContentValues()
+        valuesPrecios2.put("cantidadActividades", 1)
+        valuesPrecios2.put("precio", 4000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios2)
+
+        val valuesPrecios3 = ContentValues()
+        valuesPrecios3.put("cantidadActividades", 2)
+        valuesPrecios3.put("precio", 7000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios3)
+
+        val valuesPrecios4 = ContentValues()
+        valuesPrecios4.put("cantidadActividades", 3)
+        valuesPrecios4.put("precio", 10000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios4)
     }
 
 

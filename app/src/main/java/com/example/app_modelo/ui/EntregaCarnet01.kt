@@ -29,6 +29,7 @@ class EntregaCarnet01 : AppCompatActivity() {
         btnVolver.setOnClickListener {
             val intentVolver = Intent(this, MenuPrincipal::class.java)
             startActivity(intentVolver)
+            finish()
         }
 
         val btnEmitir = findViewById<Button>(R.id.btnEmitir)
