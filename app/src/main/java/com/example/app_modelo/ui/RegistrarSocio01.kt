@@ -52,9 +52,14 @@ class RegistrarSocio01 : AppCompatActivity() {
                 val resultado: Long
                 if (condicion == "Socio"){
                     resultado = socioRepository.registrarNuevoSocio(nombre,apellido,documento)
+                    val intentComprobante = Intent(this, activity_comprobante_pago::class.java)
+                    intentComprobante.putExtra("DOCUMENTO", doc.toString())
+                    startActivity(intentComprobante)
+                    finish()
                 } else if (condicion == "No Socio"){
                     // llamar a la clase NOSOCIO
                     resultado = noSocioRepository.registrarNuevoNoSocio(nombre,apellido, documento)
+                    regresarMenuPrincipal()
 
                 } else {
                     Toast.makeText(this, "Condición inválida", Toast.LENGTH_SHORT).show()
@@ -64,7 +69,6 @@ class RegistrarSocio01 : AppCompatActivity() {
                 if (resultado > 0) {
                     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                     limpiarCampos()
-                    regresarMenuPrincipal()
                 } else {
                     Toast.makeText(this, "Error al registrar", Toast.LENGTH_SHORT).show()
                 }
