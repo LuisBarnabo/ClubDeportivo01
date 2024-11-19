@@ -1,5 +1,6 @@
 package com.example.app_modelo.ui
 
+import PagosAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -19,12 +20,11 @@ class Vencimientos01 : AppCompatActivity() {
         setContentView(R.layout.activity_vencimientos01)
 
         pagosRepository = PagosRepository(this)
-        lvVencimientos = findViewById(R.id.lvVencimientos)
+        val lvVencimientos = findViewById<ListView>(R.id.lvVencimientos)
 
-        val btnEmitir = findViewById<Button>(R.id.btn_EmitirVencimientos)
-        btnEmitir.setOnClickListener {
-            listarPagosVencidosHoy()
-        }
+        val pagosVencidosHoy = pagosRepository.obtenerPagosVencidosHoy()
+        val adapter = PagosAdapter(this, pagosVencidosHoy)
+        lvVencimientos.adapter = adapter
 
         val btnVolver = findViewById<Button>(R.id.btn_Volver_Vencimientos)
         btnVolver.setOnClickListener {
@@ -33,9 +33,5 @@ class Vencimientos01 : AppCompatActivity() {
         }
     }
 
-    private fun listarPagosVencidosHoy() {
-        val pagosVencidosHoy = pagosRepository.obtenerPagosVencidosHoy()
-        val adapter = PagosAdapter(this, pagosVencidosHoy)
-        lvVencimientos.adapter = adapter
-    }
+
 }
