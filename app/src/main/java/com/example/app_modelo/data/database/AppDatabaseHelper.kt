@@ -136,7 +136,7 @@ class AppDatabaseHelper(context: Context) :
         val valuesPagos4 = ContentValues()
         valuesPagos4.put("idSocio", 103)
         valuesPagos4.put("importeTotal", 7000)
-        valuesPagos4.put("fechaVencimiento", "2024-11-12")
+        valuesPagos4.put("fechaVencimiento", "2024-11-19")
         valuesPagos4.put("estado", 1)
         db.insert(PagosTable.TABLE_NAME, null, valuesPagos4)
 
