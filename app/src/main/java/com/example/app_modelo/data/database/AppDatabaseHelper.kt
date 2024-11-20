@@ -9,7 +9,7 @@ class AppDatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private val DATABASE_NAME = "CLUBDEPORTIVO.db"
-        private val DATABASE_VERSION = 4
+        private val DATABASE_VERSION = 5
     }
 
     override fun onOpen(db: SQLiteDatabase) {
@@ -259,6 +259,41 @@ class AppDatabaseHelper(context: Context) :
         valuesPrecios4.put("cantidadActividades", 3)
         valuesPrecios4.put("precio", 10000)
         db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios4)
+
+        val valuesPrecios5 = ContentValues()
+        valuesPrecios5.put("cantidadActividades", 4)
+        valuesPrecios5.put("precio", 13000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios5)
+
+        val valuesPrecios6 = ContentValues()
+        valuesPrecios6.put("cantidadActividades", 5)
+        valuesPrecios6.put("precio", 16000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios6)
+
+        val valuesPrecios7 = ContentValues()
+        valuesPrecios7.put("cantidadActividades", 6)
+        valuesPrecios7.put("precio", 19000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios7)
+
+        val valuesPrecios8 = ContentValues()
+        valuesPrecios8.put("cantidadActividades", 7)
+        valuesPrecios8.put("precio", 22000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios8)
+
+        val valuesPrecios9 = ContentValues()
+        valuesPrecios9.put("cantidadActividades", 8)
+        valuesPrecios9.put("precio", 25000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios9)
+
+        val valuesPrecios10 = ContentValues()
+        valuesPrecios10.put("cantidadActividades", 9)
+        valuesPrecios10.put("precio", 28000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios10)
+
+        val valuesPrecios11 = ContentValues()
+        valuesPrecios11.put("cantidadActividades", 10)
+        valuesPrecios11.put("precio", 30000)
+        db.insert(PreciosTable.TABLE_NAME, null, valuesPrecios11)
     }
 
 

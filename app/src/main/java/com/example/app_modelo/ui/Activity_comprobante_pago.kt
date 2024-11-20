@@ -82,27 +82,29 @@ class activity_comprobante_pago : AppCompatActivity() {
             }
         } else if (noSocio != null) {
             actividadesRepository = ActividadesRepository(this)
-
-            val nombre = noSocio.nombreNS
-            val apellido = noSocio.apellidoNS
             val actividadRealizada = actividad
-            val currentDate = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
 
-            val lblFecha = findViewById<TextView>(R.id.lbl_FechaComprobante)
-            val lblNombre = findViewById<TextView>(R.id.lbl_NombreComprobante)
-            val lblNroSocio = findViewById<TextView>(R.id.lbl_NroSocioComprobante)
-            val lblActividades = findViewById<TextView>(R.id.lbl_ActividadesComprobante)
+            if (actividadRealizada != null) {
+                val nombre = noSocio.nombreNS
+                val apellido = noSocio.apellidoNS
+                val currentDate = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
 
-            lblFecha.text = "Fecha: $currentDate"
-            lblNombre.text = "Nombre: $nombre $apellido"
-            lblNroSocio.text = "Nro de Documento: $documento"
-//            lblActividades.text = "Actividad Realizada: $actividadRealizada"
+                val lblFecha = findViewById<TextView>(R.id.lbl_FechaComprobante)
+                val lblNombre = findViewById<TextView>(R.id.lbl_NombreComprobante)
+                val lblNroSocio = findViewById<TextView>(R.id.lbl_NroSocioComprobante)
+                val lblActividades = findViewById<TextView>(R.id.lbl_ActividadesComprobante)
 
-//            val precio = actividadesRepository.obtenerActividad(actividadRealizada)
-//            if (precio != null) {
-//                val lbl_ImporteComprobante = findViewById<TextView>(R.id.lbl_ImporteComprobante)
-//                lbl_ImporteComprobante.text = "Importe Abonado: $${precio.precio}"
-//            }
+                lblFecha.text = "Fecha: $currentDate"
+                lblNombre.text = "Nombre: $nombre $apellido"
+                lblNroSocio.text = "Nro de Documento: $documento"
+                lblActividades.text = "Actividad Realizada: $actividadRealizada"
+
+                val precio = actividadesRepository.obtenerActividad(actividadRealizada)
+                if (precio != null) {
+                    val lbl_ImporteComprobante = findViewById<TextView>(R.id.lbl_ImporteComprobante)
+                    lbl_ImporteComprobante.text = "Importe Abonado: $${precio.precioDiario}"
+            }
+            }
         } else {
             Toast.makeText(this, "No se encontró el socio con el documento ingresado", Toast.LENGTH_SHORT).show()
         }
