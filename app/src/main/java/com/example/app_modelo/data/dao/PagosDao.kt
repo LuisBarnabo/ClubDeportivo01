@@ -38,5 +38,4 @@ class PagosDao(private val database: SQLiteDatabase) {
         cursor.close()
         return pagosList
     }
-
 }
